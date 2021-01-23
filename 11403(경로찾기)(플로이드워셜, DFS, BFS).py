@@ -17,15 +17,15 @@ mylist = [
 # n = int(input())
 # mylist = [list(map(int, input().split())) for _ in range(n)]
 
-# #플로이드 워셜 알고리즘(Floyd Warshall Algorithm) 이용
-# for i in range(n) : # i노드를 거쳐서
-#     for j in range(n) :
-#         for k in range(n):
-#             if mylist[j][i] and mylist[i][k] : #j -> i, i -> k 가는길이 있으면
-#                 mylist[j][k] = 1 # j -> k 가 있다
+#플로이드 워셜 알고리즘(Floyd Warshall Algorithm) 이용
+for i in range(n) : # i노드를 거쳐서
+    for j in range(n) :
+        for k in range(n):
+            if mylist[j][i] and mylist[i][k] : #j -> i, i -> k 가는길이 있으면
+                mylist[j][k] = 1 # j -> k 가 있다
 
-# for j in mylist:
-#     print(" ".join(str(e) for e in j))
+for j in mylist:
+    print(" ".join(str(e) for e in j))
 
 
 ################# BFS
