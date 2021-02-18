@@ -1,6 +1,6 @@
 def check(r, c):
     global ans
-    for i in range(r-1):
+    for i in range(r-1):  # 첫행부터 직전행까지
         if mem_c[i] == c or abs(r-i) == abs(c-mem_c[i]):  # 지금까지 나온 열인지, 대각선이 겹치는지
             return
 
@@ -18,7 +18,7 @@ def check(r, c):
 
 
 n = int(input())
-mem_c = [0]*n
+mem_c = [0]*n  # 각 행의 몇번째 column에 퀸을 놨는지 기록
 ans = 0
 for i in range(n):  # 첫줄의 각 열에 대해서 한칸씩 놨을때 체크
     check(0, i)
